@@ -81,13 +81,13 @@ function gammacorrection()
 	
 
 	//gamma channel
-	//for(var i=0;i<maximum_size;i++)
-	//{
-		/*gamar[i] = Math.min(max_value_int,(max_value_dbl*Math.pow(i/max_value_dbl,reverse/red)+0.5));
+	for(var i=0;i<maximum_size;i++)
+	{
+		gamar[i] = Math.min(max_value_int,(max_value_dbl*Math.pow(i/max_value_dbl,reverse/red)+0.5));
 		gamag[i] =(int) Math.min(max_value_int,(int)(max_value_dbl*Math.pow(i/max_value_dbl,reverse/green)+0.5));
-		gamab[i] = (int)/Math.min(max_value_int,(int)(max_value_dbl*Math.pow(i/max_value_dbl,reverse/blue)+0.5));*/
+		gamab[i] = (int)/Math.min(max_value_int,(int)(max_value_dbl*Math.pow(i/max_value_dbl,reverse/blue)+0.5));
 		
-	//}
+	}
 
 }
 
