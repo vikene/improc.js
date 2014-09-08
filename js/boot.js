@@ -91,6 +91,29 @@ function gammacorrection()
 
 }
 
+function histogram()
+{
+	var canvas = document.getElementById("mydrawable");
+	if(canvas.getContext)
+	{
+		var image = new Image();
+		image.onload = function()
+		{
+			var display = canvas.getContext("2d");
+			display.drawImage(image,0,0);
+			var dataobj = display.getImageData(0,0,image.width,image.height);
+			var histo = [];
+			for(var i=0;i< dataobj.data.length;i+=4)
+			{
+
+			}
+
+		};
+		image.src = "mypic.jpg";
+	}
+	
+}
+
 function redfilter(){
 	var canvas = document.getElementById("mydrawable");
 	if(canvas.getContext)
