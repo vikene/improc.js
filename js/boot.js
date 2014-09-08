@@ -81,13 +81,13 @@ function gammacorrection()
 	
 
 	//gamma channel
-	for(var i=0;i<maximum_size;i++)
-	{
-		gamar[i] = Math.min(max_value_int,(max_value_dbl*Math.pow(i/max_value_dbl,reverse/red)+0.5));
+	//for(var i=0;i<maximum_size;i++)
+	//{
+		/*gamar[i] = Math.min(max_value_int,(max_value_dbl*Math.pow(i/max_value_dbl,reverse/red)+0.5));
 		gamag[i] =(int) Math.min(max_value_int,(int)(max_value_dbl*Math.pow(i/max_value_dbl,reverse/green)+0.5));
-		gamab[i] = (int)/Math.min(max_value_int,(int)(max_value_dbl*Math.pow(i/max_value_dbl,reverse/blue)+0.5));
+		gamab[i] = (int)/Math.min(max_value_int,(int)(max_value_dbl*Math.pow(i/max_value_dbl,reverse/blue)+0.5));*/
 		
-	}
+	//}
 
 }
 
@@ -102,11 +102,21 @@ function histogram()
 			var display = canvas.getContext("2d");
 			display.drawImage(image,0,0);
 			var dataobj = display.getImageData(0,0,image.width,image.height);
-			var histo = [];
+			var histo = [0,0];
+			/*for(var j =0;j<255;j++)
+			{
+				histo[j] =0;
+			}*/
+			alert("did");
 			for(var i=0;i< dataobj.data.length;i+=4)
 			{
+				var pointer = dataobj.data[i];
+				
+				histo[pointer]+=1; 
+				alert(histo[pointer].toString());
 
 			}
+			alert(histo[104]);
 
 		};
 		image.src = "mypic.jpg";
