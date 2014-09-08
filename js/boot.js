@@ -65,64 +65,6 @@ function edge2()
 }
 
 
-function gammacorrection()
-{
-		
-	var maximum_size = 255;
-	var max_value_dbl = parseFloat("255.0");
-	var max_value_int= 255;
-	var reverse = parseFloat("1.0");
- var red = 1.8;
- var green = 1.8;
- var blue =1.8;
-	var gamar=0;
-	var gamag=0;
-	var gamab=0;
-	
-
-	//gamma channel
-	//for(var i=0;i<maximum_size;i++)
-	//{
-		/*gamar[i] = Math.min(max_value_int,(max_value_dbl*Math.pow(i/max_value_dbl,reverse/red)+0.5));
-		gamag[i] =(int) Math.min(max_value_int,(int)(max_value_dbl*Math.pow(i/max_value_dbl,reverse/green)+0.5));
-		gamab[i] = (int)/Math.min(max_value_int,(int)(max_value_dbl*Math.pow(i/max_value_dbl,reverse/blue)+0.5));*/
-		
-	//}
-
-}
-
-function histogram()
-{
-	var canvas = document.getElementById("mydrawable");
-	if(canvas.getContext)
-	{
-		var image = new Image();
-		image.onload = function()
-		{
-			var display = canvas.getContext("2d");
-			display.drawImage(image,0,0);
-			var dataobj = display.getImageData(0,0,image.width,image.height);
-			var histo = [0,0];
-			/*for(var j =0;j<255;j++)
-			{
-				histo[j] =0;
-			}*/
-			alert("did");
-			for(var i=0;i< dataobj.data.length;i+=4)
-			{
-				var pointer = dataobj.data[i];
-				
-				histo[pointer]+=1; 
-				alert(histo[pointer].toString());
-
-			}
-			alert(histo[104]);
-
-		};
-		image.src = "mypic.jpg";
-	}
-	
-}
 
 function redfilter(){
 	var canvas = document.getElementById("mydrawable");
