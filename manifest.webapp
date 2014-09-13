@@ -1,5 +1,5 @@
 {
-	"version":"0.00.01",
+	"version":"1",
 	"name":"Pro Cam",
 	"description":"Strictly Awesome yo yo imaging application ",
 	"icons":{
@@ -11,14 +11,10 @@
 	"launch_path":"/index.html",
 	"developer":{
 	"name":"Vigneash sundar",
-	"url":"http://www.vigneashsundar.in"
+	"url":"http://www.vikene.github.io/random"
 	},
 
-	"permissions":{
-	"geolocation":{
-	"description":"Get location from mobile network"
-	}
-	},
+	
 
 	"default-locale":"en"
 
