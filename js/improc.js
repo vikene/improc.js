@@ -26,6 +26,15 @@ improC.defaultS = {
     Test: function()
     {}
     
+    setSize: function()
+    {
+    }
+
+    global: function()
+{
+}
+
+    
     
 }
 
