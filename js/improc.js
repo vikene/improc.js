@@ -18,17 +18,17 @@ improC.defaultS = {
     
     addImage: function()
     {
-    }
+    },
     
     addListener: function()
     {
-    }
+    },
     Test: function()
-    {}
+    {},
     
     setSize: function()
     {
-    }
+    },
 
     global: function()
 {

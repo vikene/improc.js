@@ -1,16 +1,16 @@
 improc.evenT = {
 /* has Event definition for image processing library */
-    onLoad: function() {}
+    onLoad: function() {},
     
-    onFilter: function() {}
+    onFilter: function() {},
 
-    onRmFilter: function() {}
+    onRmFilter: function() {},
 
-    onRevert: function() {}
+    onRevert: function() {},
     
-    onForward: function() {}
+    onForward: function() {},
 
-    onClose: function() {}
+    onClose: function() {},
     
 
 
