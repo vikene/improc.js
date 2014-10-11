@@ -24,13 +24,14 @@ Filter definitions for improc.js list of filters are given in wiki  */
 {
 }
 
-    redfilter:
-    greenfilter:
-    bluefilter:
-    Grayscale:
-    imageflip:
-    snoweffect:
-    invert:
+    redfilter: function()
+{}
+    greenfilter: function(){}
+    bluefilter: function(){}
+    Grayscale: function(){}
+    imageflip: function(){}
+    snoweffect: function(){}
+    invert: function(){}
     
 
 }
