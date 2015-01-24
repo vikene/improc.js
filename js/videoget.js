@@ -36,7 +36,24 @@ ImprocStream.prototype = {
     failed: function(){
         console.log("failed!");
     },
-    
+    draw:function(){
+        var localVideo = document.getElementById(videoElement);
+        var can = document.getElementById(canvas);
+        var ctx = can.getContext('2d');
+        window.setInterval(function(){ctx.drawImage(localVideo,5,5,640,480);
+                                     
+			var dataobj = ctx.getImageData(0,0,640,480);
+			for(var i=0;i<dataobj.data.length;i+=4)
+			{
+				dataobj.data[i]=0;
+				dataobj.data[i+2]=0;
+			}
+			ctx.putImageData(dataobj,0,0);
+                                     
+                                     
+                                     
+                                     },20);
+    }
     
     
     
@@ -44,8 +61,9 @@ ImprocStream.prototype = {
     
 }
 
- stream_obj = new ImprocStream( "camera_video","mydraw",true,false);
+ stream_obj = new ImprocStream( "camera_video","mydrawable",true,false);
 stream_obj.getStream();
+stream_obj.draw();
 
 
 
