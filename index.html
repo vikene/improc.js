@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+	Pro Cam
+	</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css">
+
+    <link href="css/custom_boot.css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+	<script src="js/boot.js" type="text/javascript"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    
+    <script src="js/jquery.mobile-1.4.3.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+	
+
+    <div data-role="page"  data-quicklinks="true">
+
+    
+
+    <div role="main">
+
+        
+        <a href="#sidewrapper" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">>></a>
+            <canvas id="mydrawable" width="300"  height="470"></canvas>
+        
+      
+
+    
+    
+    <div data-role="panel" id="sidewrapper" data-position="left" data-display="overlay" data-theme="a">
+
+           
+         <a class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="nofil" onclick="button_click()">No fliter</a>
+            <a class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="gblur">G Blur</a>
+            <a class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="invert" >Invert</a>
+            <a class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="edge" >Edge</a>
+            <a class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="sharpen" >Sharpen</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="embross" onclick="Javascript:embross()">Embrosse</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="embross2" onclick="Javascript:embross2()">Embross 2</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="edge2" onclick="Javascript:edge2()">Edge 2</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="gray" onclick="Javascript:Grayscale()">Gray</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="snow" onclick="Javascript:snoweffect()">Snow</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="red" onclick="Javascript:redfilter()">Red Filter</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="green" onclick="Javascript:greenfilter()">Green Filter</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="blue" onclick="Javascript:bluefilter()">blue Filter</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="flip" onclick="Javascript:imageflip()">Flip image</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="gamma" onclick="Javascript:gammacorrection()">#Gamma Correction</a>
+            <a  class="ui-btn ui-shadow ui-corner-all" data-rel="close" id="hist" onclick="Javascript:histogram()">#Gamma Correction</a>
+        <a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left ui-btn-inline">Close</a>
+
+    </div><!-- /leftpanel3 -->
+
+</div>
+</div>
+
+	
+
+    <script type="text/javascript">
+    $('#gblur').click( function (e) {
+        gblur();
+    });
+
+    $('#invert').click(function(e){
+        invert();
+    });
+
+    $('#nofil').click(function(e){
+        button_click();
+    });
+
+    $('#edge').click(function(e){
+        edge();
+    });
+
+    $('#sharpen').click(function(e){
+    sharpen();
+    });
+
+    $('#embross').click(function(e){
+    embross();
+    });
+    $('#embross2').click(function(e){
+    embross2();
+    });
+    $('#gray').click(function(e){
+    Grayscale();
+    });
+    $('#snow').click(function(e){
+   snoweffect();
+    });
+    $('#red').click(function(e){
+    redfilter();
+    });
+    $('#blue').click(function(e){
+    bluefilter();
+    });
+    $('#green').click(function(e){
+    greenfilter();
+    });
+    $('#flip').click(function(e){
+    imageflip();
+    });
+    $('#gamma').click(function(e){
+    alert("Non obsolute implementation");
+    });
+     $('#hist').click(function(e){
+    alert("Non obsolute implementation");
+    });
+    </script>
+</body>
+</html>
