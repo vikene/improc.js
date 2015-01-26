@@ -7,35 +7,10 @@
     
     */ 
 
-var improC = improC || {};
-
-var improC.evenT = {};
-var improC.filteR = {};
-var improC.convolutioN = {};
-var improC.defaultS = {};
-
-improC.defaultS = {
-    
-    addImage: function()
-    {
-    },
-    
-    addListener: function()
-    {
-    },
-    Test: function()
-    {},
-    
-    setSize: function()
-    {
-    },
-
-    global: function()
-{
-}
+var Improc ={
 
     
-    
+
 }
 
 
